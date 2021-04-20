@@ -1,0 +1,10 @@
+{
+    "LaravelExtraIntellisense.basePathForCode": "api/",
+    "intelephense.environment.documentRoot": "api/",
+    "intelephense.environment.includePaths": [
+        "api/",
+        "api/*",
+        "api/app/*",
+        "api/app"
+    ]
+}

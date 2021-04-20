@@ -1,0 +1,27 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production",
+        "test": "phpunit --color",
+        "test:unit": "phpunit --testsuite Unit --color",
+        "test:feature": "phpunit --testsuite Feature --color",
+        "test:smoke": "phpunit --testsuite Smoke --color",
+        "test:watch": "watch \"npm run test --silent\" . --ignoreDotFiles ",
+        "test:unit:watch": "watch \"npm run test:unit --silent\" . --ignoreDotFiles ",
+        "test:feature:watch": "watch \"npm run test:feature --silent\" --ignoreDotFiles ",
+        "test:smoke:watch": "watch \"npm run test:smoke --silent\" --ignoreDotFiles "
+    },
+    "devDependencies": {
+        "axios": "^0.21",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "watch": "^1.0.2"
+    }
+}
