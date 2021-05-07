@@ -9,9 +9,20 @@ class Article extends Model
 {
     use HasFactory;
 
-    protected $with = ['employee'];
+    protected $with = ['user', 'section'];
 
-    public function employee() {
-        return $this->belongsTo(Employee::class);
+    protected $fillable = ['headline', 'short', 'content', 'user_id'];
+
+    protected $casts = [
+        'created_at' => 'datetime:U',
+        'updated_at' => 'datetime:U',
+    ];
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+
+    public function section() {
+        return $this->belongsTo(Section::class);
     }
 }

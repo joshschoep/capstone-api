@@ -19,7 +19,11 @@ class CreateArticlesTable extends Migration
             $table->string('headline');
             $table->mediumText('short');
             $table->longText('content');
-            $table->foreignId('employee_id')->references('id')->on('employees');
+            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('section_id')->references('id')->on('sections');
+
+            $table->string('thumbnail_url')->nullable();
+            $table->string('thumbnail_inline_location')->nullable();
         });
     }
 

@@ -12,8 +12,8 @@
         "test:unit": "phpunit --testsuite Unit --color",
         "test:feature": "phpunit --testsuite Feature --color",
         "test:smoke": "phpunit --testsuite Smoke --color",
-        "test:watch": "watch \"npm run test --silent\" . --ignoreDotFiles ",
-        "test:unit:watch": "watch \"npm run test:unit --silent\" . --ignoreDotFiles ",
+        "test:watch": "watch \"npm run test\" . --ignoreDotFiles ",
+        "test:unit:watch": "watch \"npm run test:unit --silent\" . --ignoreDotFiles --ignoreDirectoryPattern /database/ ",
         "test:feature:watch": "watch \"npm run test:feature --silent\" --ignoreDotFiles ",
         "test:smoke:watch": "watch \"npm run test:smoke --silent\" --ignoreDotFiles "
     },
